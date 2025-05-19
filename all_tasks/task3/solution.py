@@ -101,6 +101,7 @@ additional_tests = [
 
 all_tests = tests + additional_tests
 
+
 if __name__ == '__main__':
     for i, test in enumerate(all_tests):
         test_answer = appearance(test['intervals'])
