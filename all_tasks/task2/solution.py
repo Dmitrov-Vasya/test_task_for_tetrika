@@ -5,7 +5,6 @@ from collections import defaultdict
 
 
 def get_animal_count():
-    base_url = "https://ru.wikipedia.org/wiki/Категория:Животные_по_алфавиту"
     counts = defaultdict(int)
     alphabet = ['А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ж', 'З', 'И', 'К', 'Л', 'М',
                 'Н', 'О', 'П', 'Р', 'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш',

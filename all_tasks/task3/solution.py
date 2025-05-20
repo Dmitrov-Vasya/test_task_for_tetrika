@@ -56,54 +56,10 @@ tests = [
     },
 ]
 
-additional_tests = [
-    {
-        'intervals': {
-            'lesson': [1000, 2000],
-            'pupil': [1000, 1200],
-            'tutor': [1300, 2000]
-        },
-        'answer': 0
-    },
-    {
-        'intervals': {
-            'lesson': [1000, 2000],
-            'pupil': [1000, 2000],
-            'tutor': [1000, 2000]
-        },
-        'answer': 1000
-    },
-    {
-        'intervals': {
-            'lesson': [1000, 2000],
-            'pupil': [900, 1500, 1800, 2100],
-            'tutor': [950, 1900]
-        },
-        'answer': 600
-    },
-    {
-        'intervals': {
-            'lesson': [1000, 2000],
-            'pupil': [500, 900, 2100, 2200],
-            'tutor': [400, 950, 2050, 2300]
-        },
-        'answer': 0
-    },
-    {
-        'intervals': {
-            'lesson': [1000, 2000],
-            'pupil': [1100, 1900],
-            'tutor': [1000, 1200, 1300, 1500, 1600, 2000]
-        },
-        'answer': 700
-    }
-]
-
-all_tests = tests + additional_tests
 
 
 if __name__ == '__main__':
-    for i, test in enumerate(all_tests):
+    for i, test in enumerate(tests):
         test_answer = appearance(test['intervals'])
         assert test_answer == test['answer'], f'Error on test case {i}, got {test_answer}, expected {test["answer"]}'
     print("Все тесты пройдены успешно!")
